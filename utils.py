@@ -127,11 +127,15 @@ def cal_df(df:pd.DataFrame,label_name='true')->pd.DataFrame:
 
 def cla(x):  # EPA标签
     x = 10 ** x
-    if x < 500:
-        return 0
-    elif x < 5000:
+    if x <= 500:
         return 1
-    return None
+    elif x <= 500:
+        return 2
+    elif x <= 5000:
+        return 3
+    elif x >= 5000:
+        return 4
+
 
 
 def metric_c(y_true, y_pred):

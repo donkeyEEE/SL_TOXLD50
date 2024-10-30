@@ -1,8 +1,4 @@
 import numpy as np
-import deepchem as dc
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, accuracy_score, recall_score, \
-    roc_auc_score
-
 # from sklearn.decomposition import PCA, NMF
 import pandas as pd
 from deepchem.data import NumpyDataset,Dataset

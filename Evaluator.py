@@ -203,8 +203,6 @@ class SL_evaluator():
         
         # 设置整体字体和大小
         plt.rcParams['font.family'] = 'Times New Roman'
-        plt.rcParams['font.size'] = font_size
-
         plt.figure(figsize=(10, 8))
         heatmap = sns.heatmap(df.astype(float), annot=True, fmt=".3f", cmap=cmap_style, linewidths=.5, annot_kws={"size": annot_font_size})
         plt.title(f'Heatmap of {metric}', fontsize=font_size + 4)

@@ -162,8 +162,8 @@ class DataManager_valid():
         self.testmode_modelresult_Y:pd.DataFrame = pd.DataFrame([]) # 测试的结果保
         self.withoutsplit_dic_dataloader:Dict[(str,NumpyDataset)]  ={}# 字典，特征化后的数据集,没有分割
         self.num_samples:int =None
-        self.df_labels_testmode:pd.DataFrame =None # 第二层模型的测试集输入和输出 
-        self.df_labels_trainmodel:pd.DataFrame = None # 第一层模型的训练输出 
+        self.df_labels_testmode:pd.DataFrame =pd.DataFrame([])  # 第二层模型的测试集输入和输出 
+        self.df_labels_trainmodel:pd.DataFrame = pd.DataFrame([])  # 第一层模型的训练输出 
         #  _df = {model.id for model in ModelSequential } +{'lables'} +{'pre_lables'}
     def __init__(self,
                 data:pd.DataFrame,
