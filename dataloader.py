@@ -69,7 +69,6 @@ class DataLoader():
         return self.dataset
     
     def get_fold_data(self,seed=5233,ECFP_Params:list = [2048,2])->List[Tuple[Dataset, Dataset]]:
-        self.featurizer = deepchem.feat.CircularFingerprint(size=ECFP_Params[0], radius=ECFP_Params[1])
         from deepchem.splits import RandomSplitter
         import os
         splitter = RandomSplitter()
